@@ -45,9 +45,6 @@ client.on("message", async message => {
                                         message.guild.members.forEach(member => {
                                             let bc = new Discord.RichEmbed()
                                             .setTitle("Broadcast")
-                                            .addField("Sender", message.author.username)
-                                            .addField("Message", args);
-
                                             member.sendEmbed(bc);
                                         });
                         });
