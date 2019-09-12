@@ -77,9 +77,6 @@ client.on("message", async message => {
                                     message.channel.send(`:ballot_box_with_check: | Done ... The Broadcast Message Has Been Sent For ${message.guild.members.filter(r => r.presence.status !== "offline").size} Members`).then(msg => msg.delete(5000));
                                         message.guild.members.filter(r => r.presence.status !== "offline").forEach(member => {
                                             let bco = new Discord.RichEmbed()
-                                            .setColor("RANDOM")
-                                            .addField("Message", args);
-
                                             member.sendEmbed(bco);
                                         });
                         });
